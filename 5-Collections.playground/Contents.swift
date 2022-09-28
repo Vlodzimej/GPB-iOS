@@ -36,8 +36,14 @@ charArray1.forEach { char in
         newCharArray.append(char)
     }
 }
-
 print(newCharArray)
+
+// или...
+let charSet1 = Set(charArray1)
+let charSet2 = Set(charArray2)
+let newCharSet = charSet1.intersection(charSet2)
+
+print(newCharSet)
 
 // 3.Создать словарь с соотношением имя (ключ) пользователя - пароль (значение), получить из словаря все имена, пароли которых длиннее 10 символов
 
