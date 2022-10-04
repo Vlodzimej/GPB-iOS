@@ -13,8 +13,8 @@ class Stack<T> {
         }
     }
     
-    func peek() -> T {
-        guard let topElement = items.first else { fatalError("This stack is empty.") }
+    func peek() -> T? {
+        guard let topElement = items.first else { return nil }
         return topElement
     }
     
