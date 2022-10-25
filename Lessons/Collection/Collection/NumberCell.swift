@@ -8,7 +8,16 @@
 import UIKit
 
 class NumberCell: UICollectionViewCell {
-    @IBOutlet var numberLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.contentView.layer.borderColor = UIColor.black.cgColor
+        self.contentView.layer.borderWidth = 1
+    }
+    
+    func update(from number: Int) {
+        numberLabel.text = "\(number)"
+    }
     
 }

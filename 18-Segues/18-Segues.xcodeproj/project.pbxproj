@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66C7C33B29084F72009DB397 /* WhiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C7C33A29084F72009DB397 /* WhiteViewController.swift */; };
+		66C7C33D2908537D009DB397 /* BlackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C7C33C2908537D009DB397 /* BlackViewController.swift */; };
 		66D37A7E28FF198200A997A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D37A7D28FF198200A997A4 /* AppDelegate.swift */; };
 		66D37A8028FF198200A997A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D37A7F28FF198200A997A4 /* SceneDelegate.swift */; };
 		66D37A8228FF198200A997A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D37A8128FF198200A997A4 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66C7C33A29084F72009DB397 /* WhiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteViewController.swift; sourceTree = "<group>"; };
+		66C7C33C2908537D009DB397 /* BlackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackViewController.swift; sourceTree = "<group>"; };
 		66D37A7A28FF198200A997A4 /* 18-Segues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "18-Segues.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D37A7D28FF198200A997A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66D37A7F28FF198200A997A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				66D37A9328FF1C7B00A997A4 /* GreenViewController.swift */,
 				66D37A9A28FF27E000A997A4 /* RedViewController.swift */,
 				66D37A9C28FF285D00A997A4 /* BlueViewController.swift */,
+				66C7C33A29084F72009DB397 /* WhiteViewController.swift */,
+				66C7C33C2908537D009DB397 /* BlackViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +182,8 @@
 				66D37A8028FF198200A997A4 /* SceneDelegate.swift in Sources */,
 				66D37A9B28FF27E000A997A4 /* RedViewController.swift in Sources */,
 				66D37A9428FF1C7B00A997A4 /* GreenViewController.swift in Sources */,
+				66C7C33B29084F72009DB397 /* WhiteViewController.swift in Sources */,
+				66C7C33D2908537D009DB397 /* BlackViewController.swift in Sources */,
 				66D37A9D28FF285D00A997A4 /* BlueViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

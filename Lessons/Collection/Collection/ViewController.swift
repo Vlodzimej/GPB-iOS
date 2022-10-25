@@ -8,12 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let adapter = NumberAdapter()
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        adapter.setup(for: collectionView)
+        collectionView.reloadData()
     }
-
-
 }
+
+
 

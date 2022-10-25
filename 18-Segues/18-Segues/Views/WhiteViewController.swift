@@ -11,19 +11,12 @@ class WhiteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func goToNext(_ sender: Any) {
+        if let vc = BlackViewController.initFromSb() as? BlackViewController {
+            vc.number = UInt8.random(in: (0...255))
+            self.present(UINavigationController(rootViewController: vc), animated: true)
+        }
     }
-    */
-
 }

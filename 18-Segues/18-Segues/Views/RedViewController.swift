@@ -8,15 +8,26 @@
 import UIKit
 
 class RedViewController: UIViewController {
+    
+    var number: UInt8?
+    
+    @IBOutlet weak var numberLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Red controller did load")
+        guard let number = number else { return }
+        numberLabel.text = "\(number)"
+    }
 
-        // Do any additional setup after loading the view.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("Red controller will appear")
     }
     
-    @IBAction func onBackButtonTapped(_ sender: UIButton) {
-        self.dismiss(animated: true)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("Red controller will dissapear")
     }
     
     @IBAction func onNextButtonTapped(_ sender: UIButton) {
@@ -24,14 +35,9 @@ class RedViewController: UIViewController {
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func onBackButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "unwindToYellow", sender: self)
     }
-    */
 
 }
