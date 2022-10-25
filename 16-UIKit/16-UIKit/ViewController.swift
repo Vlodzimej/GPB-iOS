@@ -34,9 +34,7 @@ class ViewController: UIViewController {
         startButton.isEnabled = false
         stopButton.isEnabled = true
         
-        if let timer = timer {
-            timer.invalidate()
-        }
+        timerState = .launched
         createTimer()
     }
     
@@ -44,8 +42,26 @@ class ViewController: UIViewController {
         startButton.isEnabled = true
         stopButton.isEnabled = false
         
+        timerState = .stopped
+        invalidateTimer()
+    }
+    
+    func createTimer() {
+        guard timerState == .launched else { return }
+        timer = Timer(timeInterval: 1, repeats: true) { [weak self] timer in
+            guard let self = self else { return }
+            self.increaseTimer()
+            self.updateTimerLabel()
+        }
+        
         guard let timer = timer else { return }
-        timer.invalidate()
+        RunLoop.main.add(timer, forMode: .common)
+        print("Timer is launched")
+    }
+    
+    func invalidateTimer() {
+        timer?.invalidate()
+        print("Timer is invalidated")
     }
     
     private func increaseTimer() {
@@ -65,17 +81,6 @@ class ViewController: UIViewController {
         func getTimeText(_ value: Int) -> String {
             value < 10 ? "0\(value)" : "\(value)"
         }
-    }
-    
-    private func createTimer() {
-        timer = Timer(timeInterval: 1, repeats: true) { [weak self] timer in
-            guard let self = self else { return }
-            self.increaseTimer()
-            self.updateTimerLabel()
-        }
-        
-        guard let timer = timer else { return }
-        RunLoop.main.add(timer, forMode: .common)
     }
 }
 
