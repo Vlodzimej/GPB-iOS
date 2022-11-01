@@ -1,10 +1,6 @@
 [
   {
     "name": "Moscow",
-    "location": [
-      "latitude": "5.644466", 
-      "longtide": "37.395744"
-      ]
-    ]
+    "location": "5.644466,37.395744"
   }
 ]
