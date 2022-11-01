@@ -1,6 +1,11 @@
-[
-  {
-    "name": "Moscow",
-    "location": "5.644466,37.395744"
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "hello"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
   }
-]
+}
