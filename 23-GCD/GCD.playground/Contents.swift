@@ -90,11 +90,11 @@ func testQueue4() {
     print("1")
     serialQueue.async {
         print("2")
-        concurrentQueue.async {
+        concurrentQueue.async(flags: .barrier) {
             print("3")
             serialQueue.sync {
                 print("4")
-                concurrentQueue.sync {
+                concurrentQueue.async {
                     print("5")
                 }
                 print("6")
